@@ -1,0 +1,114 @@
+/* ------------------------------------------
+Box
+--------------------------------------------- */
+.grey_box {
+	background: #EEE;
+	padding: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius:4px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.blue_box {
+	background: #24418F none;
+	padding: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius:4px;
+	margin-bottom: 10px;
+	color: #FFF;
+}
+
+
+/* ------------------------------------------
+hr for Box
+--------------------------------------------- */
+.grey_box hr {
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #FFF;
+	clear: both;
+	height: 0;
+}
+
+.blue_box hr {
+	border-top: 1px solid #132247;
+	border-bottom: 1px solid #2b54AD;
+	clear: both;
+	height: 0;
+}
+
+/* ------------------------------------------
+Float
+--------------------------------------------- */
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+/* ------------------------------------------
+Clear float
+--------------------------------------------- */
+.clear_left {
+	clear: left;
+}
+
+.clear_right {
+	clear: right;
+}
+
+.clear_both {
+	clear: both;
+}
+
+/* ------------------------------------------
+Clear float
+--------------------------------------------- */
+.title, .grey_box .title {
+	color: #24418F;
+}
+
+.blue_box .title {
+	color: #FFF;
+}
+
+/* ------------------------------------------
+Margin Top and Bottom
+--------------------------------------------- */
+.margin_top_none {
+	margin-top: 0;
+}
+
+.margin_top_small {
+	margin-top: 10px
+}
+
+.margin_top_medium {
+	margin-top: 20px;
+}
+
+.margin_top_large {
+	margin-top: 30px;
+}
+
+.margin_bottom_none {
+	margin-bottom: 0;
+}
+
+.margin_bottom_small {
+	margin-bottom: 10px;
+}
+
+.margin_bottom_medium {
+	margin-bottom: 20px;
+}
+
+.margin_bottom_large {
+	margin-bottom: 30px;
+}

@@ -17,18 +17,18 @@
    	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
    	
-   	<context:component-scan base-package="com.onb.standards" />
+   	<context:component-scan base-package="com.bdo.demo" />
    	
 	<context:property-placeholder location="classpath:/config.properties" />
 	
 	<!-- Enable annotation style of managing transactions -->
-	<tx:annotation-driven transaction-manager="transactionManager" /> 
+	<tx:annotation-driven transaction-manager="transactionManager" />  
     
     <!-- Declare the Hibernate SessionFactory for retrieving Hibernate sessions -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource"
 		p:configLocation="classpath:/hibernate.cfg.xml"
-		p:packagesToScan="com.kingstone.inventory" />
+		p:packagesToScan="com.bdo.demo" />
   
 	<!-- Declare a datasource with connection pool --> 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"
@@ -46,13 +46,13 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"
 		p:sessionFactory-ref="sessionFactory" />
 
-	<mvc:interceptors>
-	    <bean class="org.springframework.orm.hibernate4.support.OpenSessionInViewInterceptor">
-	        <property name="sessionFactory">
-	            <ref local="sessionFactory" />
-	        </property>
-	    </bean>
-	</mvc:interceptors>
+<!-- 	<mvc:interceptors> -->
+<!-- 	    <bean class="org.springframework.orm.hibernate4.support.OpenSessionInViewInterceptor"> -->
+<!-- 	        <property name="sessionFactory"> -->
+<!-- 	            <ref local="sessionFactory" /> -->
+<!-- 	        </property> -->
+<!-- 	    </bean> -->
+<!-- 	</mvc:interceptors> -->
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> 
 		<property name="basename" value="messages" />  

@@ -10,4 +10,12 @@
 		<put-attribute name="title" value="Web Design Standards" />
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
 	</definition>
+	
+	<definition name="add-record" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/add-record.jsp" />
+	</definition>
+	
+	<definition name="records" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/records.jsp" />
+	</definition>
 </tiles-definitions>
