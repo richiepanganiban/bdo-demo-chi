@@ -25,8 +25,6 @@ public class CreditCardServiceImpl implements CreditCardService {
 	@Override
 	public List<CreditCard> getAll() {
 		Session session = sessionFactory.getCurrentSession();
-		// Query query = session.createQuery("FROM CreditCard");
-		// return query.list();
 		Criteria criteria = session.createCriteria(CreditCard.class);
 		return criteria.list();
 	}
@@ -34,11 +32,8 @@ public class CreditCardServiceImpl implements CreditCardService {
 	@Override
 	public List<CreditCard> getAll(Integer personId) {
 		Session session = sessionFactory.getCurrentSession();
-		// Query query = session.createQuery("FROM CreditCard WHERE person.id="
-		// + personId);
-		// return query.list();
 		Criteria criteria = session.createCriteria(CreditCard.class);
-		criteria.add(Restrictions.eq("id", personId));
+		criteria.add(Restrictions.eq("person.id", personId));
 		return criteria.list();
 	}
 

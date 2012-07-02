@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.bdo.demo.domain.CreditCard;
 import com.bdo.demo.domain.Person;
 import com.bdo.demo.dto.PersonDto;
 import com.bdo.demo.service.CreditCardService;
@@ -31,6 +32,7 @@ public class MainController {
 	public String getRecords(Model model) {
 		List<Person> allPersons = personService.getAll();
 		List<PersonDto> personsDto = new ArrayList<PersonDto>();
+		System.out.println("hello" + creditCardService.getAll(new Integer(1)));
 		for (Person person : allPersons) {
 			PersonDto personDto = new PersonDto();
 			personDto.setId(person.getId());
@@ -38,6 +40,9 @@ public class MainController {
 			personDto.setLastName(person.getLastName());
 			personDto.setMoney(person.getMoney());
 			personDto.setCreditCards(creditCardService.getAll(person.getId()));
+			for(CreditCard cc : personDto.getCreditCards()) {
+				System.out.println(cc.getNumber());
+			}
 
 			personsDto.add(personDto);
 		}
@@ -63,7 +68,7 @@ public class MainController {
 	public String delete(@RequestParam("id") Integer personId) {
 		creditCardService.deleteAll(personId);
 		personService.delete(personId);
-		return "redirect:/list";
+		return "redirect:/main/record/list";
 	}
 
 	@RequestMapping(value = "/edit", method = { RequestMethod.GET })
@@ -77,6 +82,6 @@ public class MainController {
 	public String postEdit(@RequestParam("id") Integer personId, @ModelAttribute("personAttribute") Person person) {
 		person.setId(personId);
 		personService.edit(person);
-		return "redirect:/list";
+		return "redirect:/main/record/list";
 	}
 }

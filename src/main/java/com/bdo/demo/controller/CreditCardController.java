@@ -35,7 +35,7 @@ public class CreditCardController {
 	public String postAdd(@RequestParam("id") Integer personId,
 			@ModelAttribute("creditCardAttribute") CreditCard creditCardAttribute) {
 		creditCardService.add(personId, creditCardAttribute);
-		return "redirect:/list";
+		return "redirect:/main/record/list";
 	}
 
 	@RequestMapping(value = "/edit", method = { RequestMethod.GET })
@@ -50,7 +50,7 @@ public class CreditCardController {
 			@ModelAttribute("creditCardService") CreditCard creditCard) {
 		creditCard.setId(creditCardId);
 		creditCardService.edit(creditCard);
-		return "redirect:/list";
+		return "redirect:/main/record/list";
 	}
 
 }

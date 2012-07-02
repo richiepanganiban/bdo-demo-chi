@@ -18,4 +18,16 @@
 	<definition name="records" extends="base.definition">
 		<put-attribute name="body" value="/WEB-INF/views/records.jsp" />
 	</definition>
+	
+	<definition name="edit-record" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/edit-record.jsp" />
+	</definition>
+	
+	<definition name="add-credit-card" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/add-credit-card.jsp" />
+	</definition>
+	
+	<definition name="edit-credit-card" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/edit-credit-card.jsp" />
+	</definition>
 </tiles-definitions>
