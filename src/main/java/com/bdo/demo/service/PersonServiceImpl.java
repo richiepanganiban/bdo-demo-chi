@@ -22,8 +22,6 @@ public class PersonServiceImpl implements PersonService {
 	@Override
 	public List<Person> getAll() {
 		Session session = sessionFactory.getCurrentSession();
-		// Query query = session.createQuery("FROM Person");
-		// return query.list();
 		Criteria criteria = session.createCriteria(Person.class);
 		return criteria.list();
 	}
