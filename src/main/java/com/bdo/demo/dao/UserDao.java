@@ -5,7 +5,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import com.bdo.demo.auth.UserAuth;
 
 public interface UserDao {
-	
-	UserAuth findByUsername(String username) throws UsernameNotFoundException;
+
+	UserAuth getUser(String username) throws UsernameNotFoundException;
+
+	void addUser(UserAuth user) throws UsernameAlreadyUsedException;
+
+	void changePassword(UserAuth user);
 
 }

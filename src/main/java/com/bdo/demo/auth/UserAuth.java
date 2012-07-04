@@ -17,7 +17,7 @@ public class UserAuth {
 	@GeneratedValue
 	private Long id;
 
-	@Column(name = "username")
+	@Column(name = "username", unique = true)
 	private String username;
 
 	@Column(name = "password")
@@ -58,7 +58,5 @@ public class UserAuth {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	
-	
 
 }

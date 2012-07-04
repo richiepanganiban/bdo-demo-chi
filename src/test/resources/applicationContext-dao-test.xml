@@ -19,7 +19,7 @@
    	
    	<context:component-scan base-package="com.bdo.demo" />
    	
-	<context:property-placeholder location="classpath:/config.properties" />
+	<context:property-placeholder location="classpath:/config-test.properties" />
 	
 	<!-- Enable annotation style of managing transactions -->
 	<tx:annotation-driven transaction-manager="transactionManager" />  
@@ -27,7 +27,7 @@
     <!-- Declare the Hibernate SessionFactory for retrieving Hibernate sessions -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:configLocation="classpath:/hibernate.cfg.xml"
+		p:configLocation="classpath:/hibernate.cfg-test.xml"
 		p:packagesToScan="com.bdo.demo" />
   
 	<!-- Declare a datasource with connection pool --> 

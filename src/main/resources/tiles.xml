@@ -31,7 +31,5 @@
 		<put-attribute name="body" value="/WEB-INF/views/edit-credit-card.jsp" />
 	</definition>
 	
-	<definition name="login" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
-	</definition>
+	<definition name="login" template="/WEB-INF/views/login.jsp"/>
 </tiles-definitions>

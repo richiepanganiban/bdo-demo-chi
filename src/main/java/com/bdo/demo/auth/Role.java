@@ -18,9 +18,6 @@ public class Role {
 	@Column(name = "ROLE_NAME")
 	private String roleName;
 
-	// @OneToMany
-	// private
-
 	public Long getId() {
 		return id;
 	}
