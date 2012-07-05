@@ -19,8 +19,14 @@
 </head>
 <body>
 	<div class="container_12">
-	<a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+	
 		<tiles:insertAttribute name="body" />
+		
+		<div class="margin_top_large">
+			<a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+		</div>
+	
 	</div>
+	
 </body>
 </html>

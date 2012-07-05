@@ -2,8 +2,6 @@ package com.bdo.demo.dao;
 
 import javax.annotation.Resource;
 
-import org.dbunit.dataset.IDataSet;
-import org.dbunit.dataset.xml.FlatXmlDataSet;
 import org.junit.Test;
 
 import com.bdo.demo.auth.Role;
@@ -76,11 +74,6 @@ public class UserDaoTest extends BaseDaoTest {
 		System.out.println(updatedUser.getPassword());
 		assertEquals(updatedUser.getPassword(), "chi_updatedpassword");
 
-	}
-
-	@Override
-	protected IDataSet getDataSet() throws Exception {
-		return new FlatXmlDataSet(this.getClass().getResourceAsStream("/dataset.xml"));
 	}
 
 }

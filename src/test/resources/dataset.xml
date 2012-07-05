@@ -6,4 +6,5 @@
 	<users id="1" username="chi" password="chi_password" role_id="1"></users>
 	<users id="2" username="anson" password="anson_password" role_id="2"></users>
 	<users id="3" username="tin" password="tin_password" role_id="3"></users>
+	<branch id="1" branch_name="Mandaluyong Branch" location="Mandaluyong City"></branch>
 </dataset>

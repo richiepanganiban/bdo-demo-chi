@@ -11,25 +11,20 @@
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
 	</definition>
 	
-	<definition name="add-record" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/add-record.jsp" />
-	</definition>
-	
-	<definition name="records" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/records.jsp" />
-	</definition>
-	
-	<definition name="edit-record" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/edit-record.jsp" />
-	</definition>
-	
-	<definition name="add-credit-card" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/add-credit-card.jsp" />
-	</definition>
-	
-	<definition name="edit-credit-card" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/edit-credit-card.jsp" />
-	</definition>
-	
+	<!-- login -->	
 	<definition name="login" template="/WEB-INF/views/login.jsp"/>
+	
+	<!-- admin -->
+	<definition name="admin" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/admin.jsp"/>
+	</definition>
+	
+	<definition name="branch" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/branch.jsp"/>
+	</definition>
+	
+	<definition name="addBranch" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/addBranch.jsp"/>
+	</definition>
+	
 </tiles-definitions>

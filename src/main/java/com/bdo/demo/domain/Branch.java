@@ -6,15 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.bdo.demo.auth.UserAuth;
-
 @Entity
-@Table(name = "BRANCHES")
+@Table(name = "BRANCH")
 public class Branch {
 
 	@Id
@@ -22,17 +18,14 @@ public class Branch {
 	@GeneratedValue
 	private Long id;
 
-	@Column(name = "BRANCH_NAME")
+	@Column(name = "BRANCH_NAME", unique = true)
 	private String branchName;
 
 	@Column(name = "LOCATION")
 	private String location;
 
-	@OneToMany
-	@JoinTable(name = "BRANCH_USERS",
-			joinColumns = @JoinColumn(name = "BRANCH_ID"),
-			inverseJoinColumns = @JoinColumn(name = "USER_ID"))
-	private List<Employee> users;
+	@OneToMany(mappedBy = "branch")
+	private List<Employee> employees;
 
 	public Long getId() {
 		return id;
@@ -58,12 +51,12 @@ public class Branch {
 		this.location = location;
 	}
 
-	public List<UserAuth> getUsers() {
-		return users;
+	public List<Employee> getEmployees() {
+		return employees;
 	}
 
-	public void setUsers(List<UserAuth> users) {
-		this.users = users;
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
 	}
 
 }

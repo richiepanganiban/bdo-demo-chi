@@ -4,6 +4,8 @@ import javax.annotation.Resource;
 
 import org.dbunit.DBTestCase;
 import org.dbunit.PropertiesBasedJdbcDatabaseTester;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.xml.FlatXmlDataSet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.After;
@@ -44,6 +46,11 @@ public abstract class BaseDaoTest extends DBTestCase {
 		session.close();
 		super.tearDown();
 		HSQLServerUtil.getInstance().stop();
+	}
+
+	@Override
+	protected IDataSet getDataSet() throws Exception {
+		return new FlatXmlDataSet(this.getClass().getResourceAsStream("/dataset.xml"));
 	}
 
 }
