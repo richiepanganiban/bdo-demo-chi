@@ -3,6 +3,7 @@
 	<roles id="1" role_name="ROLE_ADMIN"></roles>
 	<roles id="2" role_name="ROLE_MANAGER"></roles>
 	<roles id="3" role_name="ROLE_TELLER"></roles>
+	
 	<users id="1" username="chi" password="chi_password" role_id="1"></users>
 	<users id="2" username="anson" password="anson_password" role_id="2"></users>
 	<users id="3" username="tin" password="tin_password" role_id="3"></users>
