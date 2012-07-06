@@ -10,21 +10,25 @@
 		<put-attribute name="title" value="Web Design Standards" />
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
 	</definition>
-	
-	<!-- login -->	
-	<definition name="login" template="/WEB-INF/views/login.jsp"/>
-	
+
+	<!-- login -->
+	<definition name="login" template="/WEB-INF/views/login.jsp" />
+
 	<!-- admin -->
 	<definition name="admin" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/admin.jsp"/>
+		<put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
 	</definition>
-	
+
 	<definition name="branch" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/branch.jsp"/>
+		<put-attribute name="body" value="/WEB-INF/views/admin/branch/branch.jsp" />
 	</definition>
-	
+
 	<definition name="addBranch" extends="base.definition">
-		<put-attribute name="body" value="/WEB-INF/views/addBranch.jsp"/>
+		<put-attribute name="body" value="/WEB-INF/views/admin/branch/addBranch.jsp" />
 	</definition>
-	
+
+	<definition name="searchBranch" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/views/admin/branch/searchBranch.jsp" />
+	</definition>
+
 </tiles-definitions>

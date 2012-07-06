@@ -1,5 +1,7 @@
 package com.bdo.demo.dao;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -22,9 +24,8 @@ public class BranchDaoTest extends BaseDaoTest {
 		branchDao.addBranch(branch);
 
 		// then
-		Branch branchFromDb = branchDao.getBranchByName("Ayala Branch");
-		assertEquals("Ayala Branch", branchFromDb.getBranchName());
-
+		List<Branch> queriedBranchFromDb = branchDao.getBranchByName("Ayala Branch");
+		assertEquals("Ayala Branch", queriedBranchFromDb.get(0).getBranchName());
 	}
 
 }

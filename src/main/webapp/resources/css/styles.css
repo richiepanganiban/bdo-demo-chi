@@ -112,3 +112,38 @@ Margin Top and Bottom
 .margin_bottom_large {
 	margin-bottom: 30px;
 }
+
+/* ------------------------------------------
+Margin Left and Right
+--------------------------------------------- */
+.margin_left_none {
+	margin-left: 0;
+}
+
+.margin_left_small {
+	margin-left: 10px
+}
+
+.margin_left_medium {
+	margin-left: 20px;
+}
+
+.margin_left_large {
+	margin-left: 30px;
+}
+
+.margin_right_none {
+	margin-right: 0;
+}
+
+.margin_right_small {
+	margin-right: 10px;
+}
+
+.margin_right_medium {
+	margin-right: 20px;
+}
+
+.margin_right_large {
+	margin-right: 30px;
+}

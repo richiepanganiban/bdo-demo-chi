@@ -73,6 +73,15 @@ public class AdminControllerTest {
 
 	}
 
+	@Test
+	public void shouldReturnSearchBranchPage() {
+		// when
+		String searchBranchPage = adminController.getSearchBranchPage();
+
+		// then
+		assertEquals("searchBranch", searchBranchPage);
+	}
+
 	@After
 	public void tearDown() {
 		adminController = null;

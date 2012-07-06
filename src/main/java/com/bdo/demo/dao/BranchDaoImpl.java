@@ -1,5 +1,7 @@
 package com.bdo.demo.dao;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.hibernate.Criteria;
@@ -24,13 +26,13 @@ public class BranchDaoImpl implements BranchDao {
 	}
 
 	@Override
-	public Branch getBranchByName(String branchName) {
+	public List<Branch> getBranchByName(String branchName) {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Branch.class);
 		StringBuilder sb = new StringBuilder();
 		sb.append("%").append(branchName).append("%");
 		criteria.add(Restrictions.like("branchName", sb.toString()));
-		return (Branch) criteria.uniqueResult();
+		return criteria.list();
 
 	}
 

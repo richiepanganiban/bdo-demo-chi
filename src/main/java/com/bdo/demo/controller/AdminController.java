@@ -41,4 +41,9 @@ public class AdminController {
 		return "redirect:/admin/branch";
 	}
 
+	@RequestMapping(value = "/branch/searchBranch", method = RequestMethod.GET)
+	public String getSearchBranchPage() {
+		return "searchBranch";
+	}
+
 }
